@@ -1,0 +1,132 @@
+####################### DATABASES ###############################
+
+Memory, text, document, video
+
+TODO
+parcel: 'DHL slow'
+ID: 1
+User: Bosco
+
+parcel: 'DHL superfast'
+ID: 2
+User: Jane
+
+User - Task
+User - Products
+
+
+CREATE TABLE parcel(
+id SERIAL PRIMARY KEY,
+name VARCHAR(100), 
+source VARCHAR(100), 
+destination VARCHAR(100), 
+price INT, 
+delivered BOOLEAN, 
+delivery_date DATE
+);
+
+
+INSERT INTO parcel (name, source, destination, price, delivery_date, delivered) values ('bag', 'jinja', 'mbarara', 20000, '2018-04-23', False);
+
+
+INSERT INTO parcel (name, source, destination, price, delivery_date, delivered) values ('chair', 'gulu', 'kitgum', 300000, '2018-12-02', False);
+
+
+INSERT INTO parcel (name, source, destination, price, delivery_date, delivered) values ('table', 'mbale', 'gulu', 70000, '2018-11-9', False);
+
+
+INSERT INTO parcel (name, source, destination, price, delivery_date, delivered) values ('laptop', 'lira', 'kitgum', 20000, '2018-02-19', False);
+
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (3, 'Teddy', 23, 'Norway', 20000.00, DEFAULT );
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,JOIN_DATE) VALUES (2, 'Allen', 25, 'Texas', '2007-12-13');
+
+
+
+Databases:
+- Retrieve
+- Create
+- Update
+- Delete
+- Relationship
+
+
+BOSCO -- one or many PARCELS
+ALP35 LEAERNERS -- many to many WATER DISPENSER
+PERSON --- one to one HEAD
+
+
+DATABASES
+
+RELATIONAL DB; postgres, mysql, mssql, oracle
+
+NON RELATIONAL DB; mongodb, maria, couch, redis, cloud datastore
+
+
+
+
+Many to Many
+One to Many
+One to One
+
+
+Databases
+
+Relational DB:
+Mysql, postgres, ms-sql, oracle
+
+
+Non Relational DB:
+MongoDB, casandra, consmos, cloud datastore
+
+
+User - innocent
+Database - innocent
+Password - xxxxxxxx
+Port - 5423
+
+
+sudo -u codephillip psql
+\password innocent
+
+http://suite.opengeo.org/docs/latest/dataadmin/pgGettingStarted/firstconnect.html
+
+postgres-# \l
+\c dbname
+
+
+\dt - show tables
+
+- what are databases
+- why we need them
+- types of databases
+- what is postgres
+- install postgres
+- postgres datatypes
+- create table 
+- insert query
+- where, or, and
+- connect postgres to python
+
+
+
+
+
+
+
+
+CREATE TABLE parcel (
+    parcel_id serial PRIMARY KEY,
+    name VARCHAR (50) NOT NULL UNIQUE,
+    delivered BOOLEAN,
+    type VARCHAR (50) NOT NULL,
+    color VARCHAR (25) NOT NULL,
+    arrival DATE
+);
+
+
+ INSERT INTO parcel (name, delivered, type, color, arrival) VALUES ('parcel1', False, 'perishable', 'red', '2018-11-23');
+
+ SELECT * FROM parcel;
+
+######################################################
+
