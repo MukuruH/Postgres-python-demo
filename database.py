@@ -3,11 +3,16 @@ import psycopg2.extras
 
 class DatabaseConnection:
 	def __init__(self):
+		if os.getenv('APP_SETTINGS') == 'test_db':
+            self.db = 'test_db'
+        else:
+            self.db = 'stackoverflow'
+
 		db_credentials = """
 		dbname='phillip' user='phillip' password='password123'
 	    host='localhost' port='5432'
 		"""
-		connection = psycopg2.connect(db_credentials)
+		connection = psycopg2.connect(dbname=self.db, user='phillip', password='password123', host='localhost', port='5432')
 		connection.autocommit = True
 		self.cursor = connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 		print(self.cursor)
