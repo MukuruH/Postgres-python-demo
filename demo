@@ -86,7 +86,7 @@ Port - 5423
 
 
 sudo -u codephillip psql
-\password innocent
+\password XXXXXXXX
 
 http://suite.opengeo.org/docs/latest/dataadmin/pgGettingStarted/firstconnect.html
 
@@ -109,11 +109,6 @@ postgres-# \l
 
 
 
-
-
-
-
-
 CREATE TABLE parcel (
     parcel_id serial PRIMARY KEY,
     name VARCHAR (50) NOT NULL UNIQUE,
@@ -129,47 +124,3 @@ CREATE TABLE parcel (
  SELECT * FROM parcel;
 
 ######################################################
-
-
-
-
-
-
-
-
-
-
-Postman
-Tests - budges
-Code
-- Errors and wrong input
-Github
-- Pull requests
-- Project structure
-Git - logs
-Pivotal tracker
-Project structure
-
-
-
-Joan
-+ Validate inputs
-+ Show the appropriate error to the user
-+ Single parcel endpoint not working
-+ Single parcel endpoint should not accept and id number that is not existing
-+ Please read the assignment on each endpoint
-+ Please follow TDD
-+ Write few - one to two 
-+ Write extensive test
-+ Test for wrong input
-+ Work on your README
-+ Pivotal tracker - github integration
-+ Use git workflow
-
-Francis
-+ all_order not all orders
-+ Validate inputs
-+ Show the appropriate error to the user
-+ Work on PUT
-+ Meeting expectations
-+ 
